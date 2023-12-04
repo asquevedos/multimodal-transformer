@@ -3,6 +3,9 @@
 ## Overview
 This repository contains the code and documentation for a research project focused on applying a Multimodal Transformer model to improve pathology detection in chest X-ray images. The project integrates image and clinical text data to enhance diagnostic accuracy.
 
+![AUC ROC](images/Multimodal-Transformer.jpg)
+
+
 ## Project Description
 The project aims to address the challenges in interpreting chest X-ray images by using multimodal data. It involves creating a multimodal dataset from the MIMIC-CXR and MIMIC-CXR-JPG datasets, processing clinical text with Clinical BERT, and processing chest radiographic images with Densenet121. The Multimodal Transformer model was developed using PyTorch, a leading deep learning framework that provides flexibility and a rich set of tools for building complex neural network architectures.
 
@@ -75,4 +78,4 @@ This project utilizes the MIMIC-CXR and MIMIC-CXR-JPG datasets. These datasets a
 
 ## Results
 The project's findings, including the model's performance metrics and effectiveness in pathology detection.
-
+![AUC ROC](images/roc_with_zoom_3.png)
