@@ -6,7 +6,7 @@ from collections import Counter
 from sklearn.model_selection import GroupShuffleSplit
 from sklearn.preprocessing import MultiLabelBinarizer
 
-from EmbeddingBasedMedicalProcessor import *
+from embedding-based-medical-processor import *
 import cv2
 
 from tqdm import tqdm
