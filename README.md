@@ -45,6 +45,7 @@ Instructions for cloning the repository and setting up the environment.
 
 ### Model Checkpoint
 The best checkpoint of the Multimodal Transformer model, which has been trained and evaluated on the MIMIC datasets, is available for download. You can use this checkpoint to quickly start using the model without the need for training from scratch.
+ * Download Link: [Best Model Checkpoint](https://espolec-my.sharepoint.com/:u:/g/personal/asqueved_espol_edu_ec/Eeor6uy17R1Agc7Tm1WjkmwBcuaKCdkDlp4EoYMz3j8CDw?e=jSZxGZ)
 
 ### Using the Checkpoint
 After downloading the checkpoint file, place it in the appropriate directory within your project. Update the model loading section in the code to use this checkpoint file for initializing the model in multimodal_transformer_model.py
