@@ -30,13 +30,13 @@ embedding_interactions='concatenation'
 
 
 # We can Choice between three different embedding interactions and five different splits
-mimic_train_dataset= MIMIC_MultiModalDataset(mimic_pk_path='/home/sebastian/data/Hollistic_Dataset.pk',
+mimic_train_dataset= MIMIC_MultiModalDataset(mimic_pk_path='/Hollistic_Dataset.pk',
                                     split_nunber="Split_1",split_interaction="Train",         
                                     embedding_interactions=embedding_interactions,
                                     transform=composed 
                                     )
 
-mimic_test_dataset = MIMIC_MultiModalDataset(mimic_pk_path='/home/sebastian/data/Hollistic_Dataset.pk',
+mimic_test_dataset = MIMIC_MultiModalDataset(mimic_pk_path='/Hollistic_Dataset.pk',
                                     split_nunber="Split_1",split_interaction="Test",         
                                     embedding_interactions=embedding_interactions,
                                     transform=composed 
@@ -179,7 +179,7 @@ class MMT(pl.LightningModule):
         self._calculate_loss(batch, mode="test")
 
 
-CHECKPOINT_PATH = os.environ.get("PATH_CHECKPOINT", "/home/sebastian/data/HAIM/saved_models/")        
+CHECKPOINT_PATH = os.environ.get("PATH_CHECKPOINT", "/saved_models/")        
          
 def train_model(train_dataloader_, val_dataloader_,test_dataloader_,**kwargs):
     #Commet logger
@@ -193,7 +193,7 @@ def train_model(train_dataloader_, val_dataloader_,test_dataloader_,**kwargs):
          logger=logger,
         max_epochs=15,
         callbacks=[
-            #EarlyStopping(monitor="val_loss", min_delta=0.001, patience=30, verbose=False, mode="min"),##Ojo con los textos de las metricas
+            #EarlyStopping(monitor="val_loss", min_delta=0.001, patience=30, verbose=False, mode="min"),
             ModelCheckpoint(
                 save_weights_only=True, 
                 mode="min", 
