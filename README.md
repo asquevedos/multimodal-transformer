@@ -21,17 +21,17 @@ To access and use the MIMIC datasets (MIMIC-CXR and MIMIC-CXR-JPG), researchers 
 
 ## Installation
 Instructions for cloning the repository and setting up the environment.
-pip install pandas 
-pip install numpy 
-pip install torch 
-pip install torchvision 
-pip install torchxrayvision 
-pip install transformers 
-pip install opencv-python
-pip install sklearn 
-pip install matplotlib 
-pip install tqdm 
-pip install dask
+* pip install pandas 
+* pip install numpy 
+* pip install torch 
+* pip install torchvision 
+* pip install torchxrayvision 
+* pip install transformers 
+* pip install opencv-python
+* pip install sklearn 
+* pip install matplotlib 
+* pip install tqdm 
+* pip install dask
 ## Usage
 ### Adjusting File Paths
 * Open the script files in the repository.
@@ -43,10 +43,10 @@ pip install dask
 * multimodal_data_processor.py - Use this script for processing multimodal data inputs.
 * multimodal_transformer_model.py - Finally, run this script to implement the transformer model for pathology detection.
 
-###Model Checkpoint
+### Model Checkpoint
 The best checkpoint of the Multimodal Transformer model, which has been trained and evaluated on the MIMIC datasets, is available for download. You can use this checkpoint to quickly start using the model without the need for training from scratch.
 
-###Using the Checkpoint
+### Using the Checkpoint
 After downloading the checkpoint file, place it in the appropriate directory within your project. Update the model loading section in the code to use this checkpoint file for initializing the model in multimodal_transformer_model.py
 
 
