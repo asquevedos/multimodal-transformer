@@ -13,8 +13,8 @@ from tqdm import tqdm
 import re
 
 
-
-csv_jpg_chest='/media/sebastian/1e69639a-af19-41e0-991c-9e42e77d612c/physionet/files/mimiciv/1.0/mimic-cxr-jpg/2.0.0/mimic-cxr-2.0.0-chexpert.csv'
+#configure this path according to the download of this file
+csv_jpg_chest='/physionet/files/mimiciv/1.0/mimic-cxr-jpg/2.0.0/mimic-cxr-2.0.0-chexpert.csv'
 
 dataset=pd.read_csv(csv_jpg_chest)
 chexnet_targets = [
@@ -79,10 +79,11 @@ def extract_reason_exam(report):
     return text
 
 
-csv_metadata='/media/sebastian/1e69639a-af19-41e0-991c-9e42e77d612c/physionet/files/mimiciv/1.0/mimic-cxr-jpg/2.0.0/mimic-cxr-2.0.0-metadata.csv'
-csv_jpg_chest='/media/sebastian/1e69639a-af19-41e0-991c-9e42e77d612c/physionet/files/mimiciv/1.0/mimic-cxr-jpg/2.0.0/mimic-cxr-2.0.0-chexpert.csv'
-root_dir='/media/sebastian/1e69639a-af19-41e0-991c-9e42e77d612c/physionet/files/mimiciv/1.0/mimic-cxr-jpg/2.0.0/'
-split='/media/sebastian/1e69639a-af19-41e0-991c-9e42e77d612c/physionet/files/mimiciv/1.0/mimic-cxr-jpg/2.0.0/mimic-cxr-2.0.0-split.csv'
+#configure this path according to the download of this file
+csv_metadata='/physionet/files/mimiciv/1.0/mimic-cxr-jpg/2.0.0/mimic-cxr-2.0.0-metadata.csv'
+csv_jpg_chest='/physionet/files/mimiciv/1.0/mimic-cxr-jpg/2.0.0/mimic-cxr-2.0.0-chexpert.csv'
+root_dir='/physionet/files/mimiciv/1.0/mimic-cxr-jpg/2.0.0/'
+split='/physionet/files/mimiciv/1.0/mimic-cxr-jpg/2.0.0/mimic-cxr-2.0.0-split.csv'
 
 df_merge=pd.merge(pd.read_csv(csv_metadata),df_balanced,on=['subject_id', 'study_id'])
 df_merge=pd.merge(pd.read_csv(split),df_merge,on=['subject_id', 'study_id'])
@@ -127,4 +128,4 @@ for i in range(5):
 
 
 # Save the multimodal dataset to a Python pickle file
-all.to_pickle('/home/sebastian/data/Hollistic_Dataset.pk')
+all.to_pickle('/Hollistic_Dataset.pk')
